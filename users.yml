@@ -1,0 +1,7 @@
+---
+user1:
+  # password: test
+  password_hash: $6$n/fuff0I1Y5Tmf/U$Oeor8oiTlSMe2tPvHKznBt5Tz3yCCUDt4ucyNZdR5UCl4i/u8wkfP4s2AuTWCP5YxylYAsv8waVIzSCxPnfKJ1
+user2:
+  # password: test1
+  password_hash: $6$faUmvV/WnVcLu2/l$kiP8/36yc7BZoAHHMFIzT0JQx3p29NaL21oELFWhKzDsiP/JcJLBQF2RT7nCOVR1ZeIbnBbfDXcmAovL65Y0X.

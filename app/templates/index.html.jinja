@@ -1,0 +1,19 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{ super() }}
+<title>{{ app.config["APP_TITLE"] + " Welcome"}}</title>
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<div class='container'>
+    <h1>Some Wedding&nbsp;<small>is happening</small></h1>
+    <h4>Welcome</h4>
+    <a href="{{ url_for('rsvp') }}">RSVP!</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+{{ super() }}
+<div class='container'>
+    <h1>RSVP</h1>
+    <form id="rsvpform" action="{{ url_for("rsvp") }}" method="post">
+        {{ form.csrf_token }}
+        {{ form.name.label }}
+        {{ form.name }}
+        {% for entry in form.errors.name %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        {{ form.adults.label }}
+        {{ form.adults }}
+        {% for entry in form.errors.adults %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        {{ form.kids.label }}
+        {{ form.kids }}
+        {% for entry in form.errors.kids %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        {{ form.duration.label }}
+        {{ form.duration }}
+        {% for entry in form.errors.duration %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        {{ form.accommodations.label }}
+        {{ form.accommodations }}
+        {% for entry in form.errors.accommodations %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        {{ form.comment.label }}
+        {{ form.comment }}
+        {% for entry in form.errors.comment %}
+            {{ entry }}
+        {% endfor %}
+        <br>
+        <input type="submit" value="Book Now!">
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

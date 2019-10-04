@@ -1,0 +1,39 @@
+<!doctype html lang="en">
+
+{% block title %}
+  <title>{{ app.config["APP_TITLE"] }}</title>
+{% endblock%}
+
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+{% endblock %}
+
+{% if current_user.is_authenticated %}
+{% block nav %}
+<div class="nav">
+  <a href="{{ url_for('index') }}">Home</a>
+  <a href="{{ url_for('logout') }}">Logout</a>
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+</html>
