@@ -1,3 +1,6 @@
+#App-specific stuff
+rsvp/
+
 #Editor stuff
 .vscode/
 
