@@ -147,7 +147,7 @@ sshtunnel==0.1.5
 tabulate==0.8.5
 traitlets==4.3.3
 typed-ast==1.4.0
-urllib3==1.25.6
+urllib3==1.26.5
 vsts==0.1.25
 vsts-cd-manager==1.0.2
 wcwidth==0.1.7
